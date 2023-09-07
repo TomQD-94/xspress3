@@ -360,4 +360,34 @@ text {
 	y2_axis {
 		rangeStyle="auto-scale"
 	}
+"cartesian plot" {
+	object {
+		x=860
+		y=270
+		width=280
+		height=210
+	}
+	plotcom {
+		title="Summed MCAs"
+		xlabel="channel"
+		ylabel="counts"
+		clr=14
+		bclr=2
+	}
+	style="line"
+	erase_oldest="plot last n pts"
+	trace[0] {
+		ydata="$(P):$(R)8:ArrayData"
+		data_clr=27
+		yaxis=0
+	}
+	x_axis {
+		maxRange=4096.000000
+	}
+	y1_axis {
+		rangeStyle="auto-scale"
+	}
+	y2_axis {
+		rangeStyle="auto-scale"
+	}
 }

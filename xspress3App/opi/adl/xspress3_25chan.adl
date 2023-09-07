@@ -1,12 +1,12 @@
 
 file {
-	name="/home/xspress3/epics/xspress3/xspress3App/opi/adl/xspress3_8chan.adl"
-	version=030112
+	name="/home/epics/support/xspress3/xspress3App/opi/adl/xspress3_25chan.adl"
+	version=030109
 }
 display {
 	object {
-		x=400
-		y=250
+		x=690
+		y=186
 		width=450
 		height=525
 	}
@@ -102,7 +102,7 @@ text {
 	object {
 		x=10
 		y=5
-		width=150
+		width=180
 		height=18
 	}
 	"basic attribute" {
@@ -330,9 +330,9 @@ text {
 }
 "text entry" {
 	object {
-		x=120
+		x=102
 		y=120
-		width=80
+		width=100
 		height=20
 	}
 	control {
@@ -342,6 +342,32 @@ text {
 	}
 	limits {
 	}
+}
+"choice button" {
+	object {
+		x=155
+		y=175
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P):det1:CTRL_DTC"
+		clr=14
+		bclr=3
+	}
+	stacking="column"
+}
+text {
+	object {
+		x=5
+		y=180
+		width=150
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Dead Time Corr"
 }
 text {
 	object {
@@ -544,7 +570,22 @@ byte {
 }
 "text update" {
 	object {
-		x=270
+		x=280
+		y=175
+		width=120
+		height=15
+	}
+	monitor {
+		chan="$(P):det1:CTRL_DTC_RBV"
+		clr=54
+		bclr=0
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=285
 		y=210
 		width=120
 		height=15
@@ -559,7 +600,7 @@ byte {
 }
 menu {
 	object {
-		x=120
+		x=155
 		y=210
 		width=120
 		height=20
@@ -585,9 +626,9 @@ text {
 }
 "text entry" {
 	object {
-		x=120
+		x=102
 		y=145
-		width=80
+		width=100
 		height=20
 	}
 	control {
@@ -875,99 +916,153 @@ menu {
 		width=100
 		height=25
 	}
-	display[6] {
+    	display[0] {
 		label="MCA 1"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=1"
 	}
-	display[7] {
+    	display[1] {
 		label="MCA 2"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=2"
 	}
-	display[8] {
+    	display[2] {
 		label="MCA 3"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=3"
 	}
-	display[9] {
+    	display[3] {
 		label="MCA 4"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=4"
 	}
-	display[10] {
+    	display[4] {
 		label="MCA 5"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=5"
 	}
-	display[11] {
+    	display[5] {
 		label="MCA 6"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=6"
 	}
-	display[12] {
+    	display[6] {
 		label="MCA 7"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=7"
 	}
-	display[13] {
+    	display[7] {
 		label="MCA 8"
 		name="xspress3_mcarois.adl"
 		args="P=$(P), CHAN=8"
 	}
-	display[14] {
-	label="Summed MCAs"
-	name="xspress3_mcarois.adl"
-	args="P=$(P), CHAN=2"
-	}	
-	clr=54
+    	display[8] {
+		label="MCA 9"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=9"
+	}
+    	display[9] {
+		label="MCA 10"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=10"
+	}
+    	display[10] {
+		label="MCA 11"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=11"
+	}
+    	display[11] {
+		label="MCA 12"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=12"
+	}
+    	display[12] {
+		label="MCA 13"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=13"
+	}
+    	display[13] {
+		label="MCA 14"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=14"
+	}
+    	display[14] {
+		label="MCA 15"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=15"
+	}
+    	display[15] {
+		label="MCA 16"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=16"
+	}
+    	display[16] {
+		label="MCA 17"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=17"
+	}
+    	display[17] {
+		label="MCA 18"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=18"
+	}
+    	display[18] {
+		label="MCA 19"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=19"
+	}
+    	display[19] {
+		label="MCA 20"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=20"
+	}
+    	display[20] {
+		label="MCA 21"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=21"
+	}
+    	display[21] {
+		label="MCA 22"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=22"
+	}
+    	display[22] {
+		label="MCA 23"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=23"
+	}
+    	display[23] {
+		label="MCA 24"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=24"
+	}
+    	display[24] {
+		label="MCA 25"
+		name="xspress3_mcarois.adl"
+		args="P=$(P), CHAN=25"
+	}
+    	clr=54
 	bclr=55
-	label="-MCAs 1-8"
+	label="-MCAs 1-25"
 }
 "related display" {
 	object {
-		x=325
-		y=25
+		x=320
+		y=30
 		width=125
 		height=25
 	}
 	display[1] {
-		label="Single MCA Plots [ME7]"
-		name="xspress3_8mcas.adl"
+		label="Single MCA Plots "
+		name="xspress3_25mcas.adl"
 		args="P=$(P), R=MCA"
 	}
 	display[2] {
-		label="Summed MCA Plots [ME7]"
-		name="xspress3_8mcas.adl"
+		label="Summed MCA Plots "
+		name="xspress3_25mcas.adl"
 		args="P=$(P), R=MCASUM"
 	}
 	clr=54
 	bclr=55
 	label="-Combined Plots"
-}
-text {
-	object {
-		x=5
-		y=180
-		width=110
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="Erase on Start?"
-}
-"choice button" {
-	object {
-		x=120
-		y=175
-		width=120
-		height=20
-	}
-	control {
-		chan="$(P):det1:EraseOnStart"
-		clr=14
-		bclr=3
-	}
-	stacking="column"
 }
